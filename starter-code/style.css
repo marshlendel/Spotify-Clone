@@ -3,6 +3,7 @@
 *{
 	margin: 0;
     padding: 0;
+	box-sizing: border-box;
 }
 
 body {
@@ -62,7 +63,7 @@ h1, h2, h3, a {
 .hero {
 	background: linear-gradient(90deg, rgba(77.5, 77.5, 77.5, 0.4), rgba(77.5, 77.5, 77.5, 0.4)), url("images/landing.jpg");
 	background-size: cover;
-	background-position: center 75%;
+	background-position: center 67%;
 	height: calc(100vh - 60px);
 	color: #FFF;
 	display: flex;
@@ -73,9 +74,10 @@ h1, h2, h3, a {
 
 .hero h1 {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 4rem;
+	font-size: 4.5rem;
 	/* letter-spacing: -1px; */
-	margin-top: 190px;
+	margin-top: 250px;
+	margin-bottom: 15px;
 }
 
 .hero p {
@@ -87,20 +89,84 @@ h1, h2, h3, a {
 
 /* Features */
 
+.features {
+	text-align: center;
+}
+
+.features-container {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 85px;
+	margin-bottom: 80px;
+	width: 100%;
+	justify-content: center;
+}
+
+.feature-block {
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+	width: 33.3333333%;
+	height: 150px;
+}
+
+#HD {
+	margin-top: 7px;
+}
+
+.feature-icon {
+	display: inline-block;
+	margin-top: 20px;
+	width: 97px;
+}
+
 .features h2 {
-	border-bottom: ;
+	font-size: 2rem;
+	border-bottom: 3px solid #00B172;
+	display: inline-block;
+}
+
+.features h3 {
+	color: #00B172;
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+
+
+#songs h3 {
+	margin-top: 7px;
+	margin-bottom: 20px;
+}
+
+#stream h3 {
+	margin-bottom: 13px
+}
+
+
+/* #stream h3 {
+	margin-top: 10px;
+} */ 
+
+
+.features p {
+	width: 181px;
 }
 
 .features {
 	padding: 30px;
 }
 
-.feature-icon {
-	width: 10%;
-}
-	/*
-		Colors:
-		Text: 1A1A1A
-		Green: #00B172
-		White: #FFF
-	*/
+@media only screen and (max-width: 730px) {
+	.features-container {
+		display: block;
+	}
+
+	.feature-block {
+		margin: auto;
+		margin-top: 90px;
+		margin-bottom: 150px;
+	}
+
+  }
